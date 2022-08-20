@@ -16,6 +16,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->command('download:rates')->twiceDaily(9, 17)->withoutOverlapping();
+        //$schedule->command('download:rates')->dailyAt('20:15')->withoutOverlapping();
+        $schedule->command('q:work --stop-when-empty')->everyMinute()->withoutOverlapping();
+
     }
 
     /**

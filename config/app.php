@@ -69,7 +69,8 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+   /* 'timezone' => 'UTC', - по умолчанию*/
+    'timezone' => 'Europe/Moscow',
 
     /*
     |--------------------------------------------------------------------------
@@ -195,6 +196,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        \App\Providers\RateServiceProvider::class, // сервис для курсов валют
     ],
 
     /*
