@@ -1,0 +1,14 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: 🚚 Get latest code
+        uses: sebastianpopp/git-ftp-action@releases/v3
+        with:
+          url: "ftp://evkhli86.beget.tech"
+          user: "evkhli86_diplom"
+          password: "oFn%Y7vp"
