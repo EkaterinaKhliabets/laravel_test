@@ -28,6 +28,20 @@ class UserSeeder extends Seeder
                 'not_valid' => 0,
                 'organization_id' => 1,
             ],
+
+            [
+                'name' => 'Мухаммед',
+                'lastname' => 'А.',
+                'email' => 'muhammed@gmail.com',
+                'phone' => '',
+                //'email_verified_at' => now(),
+                'password' => bcrypt('123'),
+                //'remember_token' => Str::random(10),
+
+                'is_admin' => 1,
+                'not_valid' => 0,
+                'organization_id' => 1,
+            ],
         ]);
     }
 }

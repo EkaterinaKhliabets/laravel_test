@@ -1,16 +1,17 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
 
     <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
+        {{--<li class="nav-item">
             <a href="#" class="nav-link active" aria-current="page">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#home"/>
                 </svg>
                 Home
             </a>
-        </li>
+        </li> --}}
         <li>
-            <a href="{{route('ecommerce.index')}}" class="nav-link link-dark">
+            <a href="{{route('ecommerce.index')}}"
+               class="nav-link  @if(request()->is('ecommerce') || request()->is('ecommerce/*')) active @else link-dark @endif">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2"/>
                 </svg>
@@ -18,7 +19,8 @@
             </a>
         </li>
         <li>
-            <a href="{{route('orders.index')}}" class="nav-link link-dark">
+            <a href="{{route('orders.index')}}"
+               class="nav-link @if(request()->is('orders')|| request()->is('orders/*')) active @else link-dark @endif">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#table"/>
                 </svg>
@@ -26,7 +28,8 @@
             </a>
         </li>
         <li>
-            <a href="{{route('products.index')}}" class="nav-link link-dark">
+            <a href="{{route('products.index')}}"
+               class="nav-link @if(request()->is('products')|| request()->is('products/*')) active @else link-dark @endif">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#grid"/>
                 </svg>
@@ -34,7 +37,8 @@
             </a>
         </li>
         <li>
-            <a href="{{route('clients.index')}}" class="nav-link link-dark">
+            <a href="{{route('clients.index')}}"
+               class="nav-link @if(request()->is('clients')|| request()->is('clients/*')) active @else link-dark @endif">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#people-circle"/>
                 </svg>

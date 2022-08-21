@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('email.order');
-});
+});*/
 
 // страницы, доступные для гостей
 // вся система закрыта от гостей, гость может только залогиниться
