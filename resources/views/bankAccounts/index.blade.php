@@ -5,9 +5,12 @@
     <div class=" px-4 ">
 
 
-        <div class="form-group">
-            <a href="{{route('bankAccounts.create')}}" class="btn btn-primary">Добавить</a>
+        <div class="col-8">
+            <div class="form-group">
+                <a href="{{route('bankAccounts.create')}}" class="btn btn-primary">Добавить</a>
+            </div>
         </div>
+
 
         <table class="table table-hover table-striped">
             <thead>
