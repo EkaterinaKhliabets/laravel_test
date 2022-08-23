@@ -60,7 +60,7 @@
                                             <tbody>
                                             @foreach($orders as $order)
                                                 <tr>
-                                                    <td><a href="{{route('orders.edit', $order->id)}}">{{$order->id}}</a></td>
+                                                    <td><a href="{{route('invoice.index', $order->id)}}">{{$order->id}}</a></td>
                                                     <td><a href="{{route('clients.edit', $order->client->id)}}">{{$order->client->name}}</a></td>
                                                     <td><a href="#">{{$order->user->name . ' ' . $order->user->lastname}}</a></td>
 
